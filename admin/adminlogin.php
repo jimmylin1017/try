@@ -45,13 +45,34 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Lonin</title>
+<title>Login</title>
 </head>
 
 <body>
 
 <div class="container">
-  <form method="POST" action="<?php echo $loginFormAction ?>">
+
+  <form class="form-signin" method="POST" action="<?php echo $loginFormAction ?>">
+  	<h2 class="form-signin-heading">Please log in</h2>
+    <label for="inputAccount" class="sr-only">Account</label>
+    <input type="text" id="inputAccount" name="account" class="form-control" placeholder="Account" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="login" name="login" value="login">Log in</button>
+  </form>
+
+</div> <!-- /container -->
+
+
+<!--
+<div class="container">
+  <form class="form-signin" method="POST" action="<?php //echo $loginFormAction ?>">
+  <h2 class="form-signin-heading">Please sign in</h2>
     <div class="form-group row">
       <label for="account" class="col-2 col-form-label">Account</label>
       <div class="col-2">
@@ -71,12 +92,55 @@
     </div>
   </form>
 </div>
+-->
 
 <style>
-.container {
-    padding: 70px 0;
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
 }
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/*.container {
+    padding: 70px 0;
+}*/
 </style>
+
 
 </body>
 </html>

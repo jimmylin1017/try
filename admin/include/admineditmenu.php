@@ -6,7 +6,7 @@
 </script>
 
 
-<div class="col col-4">
+<div class="col col-2">
 	<h1>MENU</h1>
 	<?php
 		if( !isset($_SESSION) ) {
@@ -20,6 +20,7 @@
 	<nav class="nav flex-column">
 		<a class="nav-link" href="adminlogout.php" onClick="return checkLogOut()">登出</a>
 		<a class="nav-link" href="admintopmenu.php">Topmenu</a>
+        <a class="nav-link" href="admineditbanner.php">Banner</a>
 		<a class="nav-link" href="admineditwebtopmenu.php">欄位設定</a>
 		<a class="nav-link disabled" href="#">Disabled</a>
 	</nav>

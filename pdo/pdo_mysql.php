@@ -153,8 +153,10 @@ class MyPDO {
 	public function getColumnName( $tableName ) {
 		$columnName = array();
 		$result = $this->searchAll($tableName);
-		foreach($result[0] as $key => $value) {
-			array_push($columnName, $key);
+		if(count($result) > 0) {
+			foreach($result[0] as $key => $value) {
+				array_push($columnName, $key);
+			}
 		}
 		return $columnName;
 	}
